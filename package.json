@@ -1,25 +1,20 @@
 {
-  "name": "insta_clone",
+  "name": "server",
   "version": "1.0.0",
-  "description": "Instagram clone app",
+  "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/suraj-somasundaran-au13/Instagram-Clone.git"
-  },
-  "author": "Suraj S",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/suraj-somasundaran-au13/Instagram-Clone/issues"
-  },
-  "homepage": "https://github.com/suraj-somasundaran-au13/Instagram-Clone#readme",
   "dependencies": {
-    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.12.13"
+    "mongoose": "^5.9.7",
+    "nodemailer": "^6.4.6",
+    "nodemailer-sendgrid-transport": "^0.2.0"
   }
 }
